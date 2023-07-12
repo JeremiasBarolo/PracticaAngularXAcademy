@@ -1,0 +1,34 @@
+.example-card {
+    max-width: 400px;
+    margin-bottom: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.nav{
+    background-color: black;
+}
+.title{
+    color: whitesmoke;
+}
+
+.container button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: red;
+}
+
+.container .example-card:last-child {
+  margin-bottom: 0;
+}
+  

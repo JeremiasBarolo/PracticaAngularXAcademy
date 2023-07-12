@@ -1,7 +1,23 @@
-<div *ngFor="let personaje of personajes">
-  <p>
-    Nombre: <strong>{{personaje.nombre}}</strong>
-    <br>
-    Costos: <strong>{{personaje.costos}}</strong>
-  </p>
+<mat-toolbar class="nav">
+  <span class="title">{{title}}</span>
+</mat-toolbar>
+
+<div class="container">
+  <div *ngIf="mostrar">
+    <mat-card class="example-card" *ngFor="let personaje of personajes">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Nombre: <strong>{{personaje.nombre}}</strong> </mat-card-title>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        Costos: <strong>{{personaje.costos}}</strong>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <button mat-flat-button color="primary" (click)="cambiarMostrar()">Mostrar tabla</button>
 </div>
+
+
+
